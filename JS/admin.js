@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const formData = new FormData(event.target);
 
         try {
-            const response = await fetch('https://test-api-oa1w.onrender.com/images-render/images', {
+            const response = await fetch('https://test-api-oa1w.onrender.com/images', {
                 method: 'POST',
                 body: formData,
                 headers: {
