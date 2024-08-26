@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', async () => {
     try {
         // Fetch and display images
-        const response = await fetch('https://test-api-oa1w.onrender.com/images-render');
+        const response = await fetch('http://localhost:3000/images-render');
         if (!response.ok) {
             throw new Error('Network response was not ok');
         }
@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         const gallerySection = document.getElementById('gallery-section');
 
         images.forEach(image => {
-            const imageUrl = `https://test-api-oa1w.onrender.com/images-render/uploads/${image.image.split('/').pop()}`;
+            const imageUrl = image.image; // Use the URL directly from the database
             console.log(imageUrl); // Log each image URL
 
             const slide = document.createElement('div');
@@ -96,4 +96,3 @@ document.addEventListener('DOMContentLoaded', async () => {
         console.error('Error fetching images:', error);
     }
 });
-    
