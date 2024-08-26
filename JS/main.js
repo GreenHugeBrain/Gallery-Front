@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', async () => {
     try {
         // Fetch and display images
-        const response = await fetch('http://localhost:3000/images-render');
+        const response = await fetch('https://test-api-oa1w.onrender.com/images-render');
         if (!response.ok) {
             throw new Error('Network response was not ok');
         }
